@@ -5,25 +5,25 @@ import React from "react";
 import { Geist, Geist_Mono, Source_Serif_4 } from "next/font/google";
 
 const geistSans = Geist({
-    variable: "--font-geist-sans",
+    // variable: "--font-geist-sans",
     subsets: ["latin"],
     weight: ["100","200","300","400","500","600","700","800","900"]
 });
 
 const geistMono = Geist_Mono({
-    variable: "--font-geist-mono",
+    // variable: "--font-geist-mono",
     subsets: ["latin"],
     weight: ["100","200","300","400","500","600","700","800","900"]
 });
 
 const sourceSerif4 = Source_Serif_4({
-    variable: "--font-geist-mono",
+    // variable: "--font-geist-mono",
     subsets: ["latin"],
     weight: ["200","300","400","500","600","700","800","900"]
 });
 
 export const metadata: Metadata = {
-    title: "SwiftCargo | Global Logistics Solutions",
+    title: "BT Logistics Solutions",
     description: "Delivering excellence across the globe with innovative logistics solutions. Air freight, ocean freight, ground transport, and warehousing services.",
     icons: {
         icon: [
@@ -44,10 +44,10 @@ export const metadata: Metadata = {
     },
 };
 
-export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
     return (
         <html lang="en">
-            <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+            <body className={`${geistSans.className} font-sans antialiased`}>
                 {children}
             </body>
         </html>
